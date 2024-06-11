@@ -8,6 +8,8 @@ app_license = "MIT"
 # Includes in <head>
 # ------------------
 
+fixtures = [{"doctype": "Custom Field", "filters": [["module" , "in" , ("Leave Duplication" )]]}]
+
 # include js, css files in header of desk.html
 # app_include_css = "/assets/leave_duplication/css/leave_duplication.css"
 # app_include_js = "/assets/leave_duplication/js/leave_duplication.js"
@@ -108,9 +110,10 @@ app_license = "MIT"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	# "ToDo": "custom_app.overrides.CustomToDo"
+    "Leave Application": "leave_duplication.overrides.CustomLeaveApplication"
+}
 
 # Document Events
 # ---------------
